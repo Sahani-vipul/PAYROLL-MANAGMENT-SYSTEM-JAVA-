@@ -1,0 +1,48 @@
+{
+  "platform": "Render",
+  "repository": "https://github.com/Sahani-vipul/PAYROLL-MANAGMENT-SYSTEM-JAVA-",
+  "branch": "main",
+  "commit": "16b736afce7f40d189a8674c17e40a118c8a2457",
+  "runtime": {
+    "environment": "Node.js",
+    "version": "22.22.0"
+  },
+  "build": {
+    "build_command": "yarn",
+    "steps": [
+      "Resolving packages",
+      "Fetching packages",
+      "Linking dependencies",
+      "Building fresh packages"
+    ],
+    "status": "successful",
+    "lockfile_created": true
+  },
+  "deploy": {
+    "start_command": "yarn start",
+    "web_concurrency": 1,
+    "status": "failed"
+  },
+  "error": {
+    "type": "MissingFileError",
+    "message": "Couldn't find a package.json file",
+    "expected_path": "/opt/render/project/src/src",
+    "exit_status": 1
+  },
+  "cause": {
+    "reason": "Repository is a Core Java project but Render attempted to run it as a Node.js application",
+    "missing_files": [
+      "package.json"
+    ]
+  },
+  "suggested_solutions": [
+    "Deploy the project as a Java application using Maven or Gradle",
+    "Convert the project into a Spring Boot web application",
+    "Run the project locally as a Java desktop application",
+    "Use Docker if converting to a server-based Java service"
+  ],
+  "documentation": {
+    "node_version_docs": "https://render.com/docs/node-version",
+    "troubleshooting_docs": "https://render.com/docs/troubleshooting-deploys"
+  }
+}
